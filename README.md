@@ -1,19 +1,17 @@
 # Overview
-This is a web scraper that collects wine product data from the website www.winedeals.com. It does so for the purpose of supplying mock inventory 
-to my eCommerce web-app, flask-wineshop. The scraped product data is used for demonstration purposes only.
+This web scraper uses BeautifulSoup4 to collect wine product data from a wine merchant website, www.winedeals.com. 
+It does so for the purpose of supplying mock inventory to my eCommerce web-app, flask-wineshop. The scraped product data
+is used for demonstration purposes only.
 
 # Directions
-I. Run Splash
+## I. Run scraper.py to scrape data
+1. To run scraper.py, you must first run Scrapy, which may be done by the following commands:
+    ```angular2html
+    $ docker pull scrapinghub/splash
+    $ docker run -p 5023:5023 -p 8050:8050 -p 8051:8051 scrapinghub/splash
+    ```
 
-In order to run scraper.py, you must first run Scrapy via Docker:
-```angular2html
-$ docker pull scrapinghub/splash
-$ docker run -p 5023:5023 -p 8050:8050 -p 8051:8051 scrapinghub/splash
-```
-Splash will now be running on `localhost:8050`
-```angular2html
-http://localhost:8050/
-```
-II. Run Scraper.py
+2. With Splash running in the background, run scraper.py via `anaconda-project run` or `python scraper.py` in terminal. 
+   Product data will be scraped and saved in the output file 'wine-data.csv'.
 
-Run scraper.py via `anaconda-project run` in the command line. The app will collect the product data from the website and save it in a csv file.
+## I. Run import.py to load data into Postgres table
