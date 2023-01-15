@@ -56,7 +56,7 @@ for page in pages:
         year = regex.findall(r'\d+', year)
         years.append(year)
 
-        # extract year from <p class="productsubtitle">2022 / 750 ml. | Item#83885</span></p>
+        # extract year from <p class="product-subtitle">2022 / 750 ml. | Item#83885</p>
         volume = product_element.find('p', 'product-subtitle').text.strip()
         # capture text between the '/' and '|' characters to get year
         volume = regex.findall(r"\/(.*?)\|", volume)
