@@ -104,76 +104,76 @@ for page in pages:
 
 
 # Initialize Pandas dataframe
-wine_data = pd.DataFrame({
-    'product_name': product_names,
-    'year': years,
-    'volume': volumes,
-    'proofs': proofs,
-    'brand': brands,
-    'country': countries,
-    'region': regions,
-    'color': colors,
-    'primary_grape': primary_grapes,
-    'all_grape': all_grapes,
-    'price': prices,
-    'image': images,
-    'description': descriptions,
-    'product_link': product_links
-})
+# wine_data = pd.DataFrame({
+#     'product_name': product_names,
+#     'year': years,
+#     'volume': volumes,
+#     'proofs': proofs,
+#     'brand': brands,
+#     'country': countries,
+#     'region': regions,
+#     'color': colors,
+#     'primary_grape': primary_grapes,
+#     'all_grape': all_grapes,
+#     'price': prices,
+#     'image': images,
+#     'description': descriptions,
+#     'product_link': product_links
+# })
 
 # Clean data; drop a row by condition
-wine_data = wine_data[wine_data.image.astype(str).str.contains(r'(https)')]
-
-wine_data.dropna(subset=["product_name"], inplace=True)
-wine_data.dropna(subset=["year"], inplace=True)
-wine_data.dropna(subset=["volume"], inplace=True)
-wine_data.dropna(subset=["proofs"], inplace=True)
-wine_data.dropna(subset=["country"], inplace=True)
-wine_data.dropna(subset=["region"], inplace=True)
-wine_data.dropna(subset=["color"], inplace=True)
-wine_data.dropna(subset=["primary_grape"], inplace=True)
-wine_data.dropna(subset=["price"], inplace=True)
-wine_data.dropna(subset=["image"], inplace=True)
-wine_data.dropna(subset=["product_link"], inplace=True)
-
-# wine_data[wine_data["region"].str.contains("Null") == False]
-# wine_data[wine_data["color"].str.contains("Null") == False]
-wine_data.drop(wine_data[wine_data['region'] == 'Null'].index, inplace=True)
-wine_data.drop(wine_data[wine_data['color'] == 'Null'].index, inplace=True)
-
-# Remove any remaining unwanted characters from Pandas dataframe
-wine_data['product_name'] = wine_data['product_name'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                              lambda m: '' if m.group(1) else np.nan)
-wine_data['year'] = wine_data['year'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                              lambda m: '' if m.group(1) else np.nan)
-wine_data['volume'] = wine_data['volume'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                  lambda m: '' if m.group(1) else np.nan)
-wine_data['proofs'] = wine_data['proofs'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                  lambda m: '' if m.group(1) else np.nan)
-wine_data['brand'] = wine_data['brand'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                lambda m: '' if m.group(1) else np.nan)
-wine_data['country'] = wine_data['country'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\')",
-                                                                    lambda m: '' if m.group(1) else np.nan)
-wine_data['region'] = wine_data['region'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                  lambda m: '' if m.group(1) else np.nan)
-wine_data['color'] = wine_data['color'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                lambda m: '' if m.group(1) else np.nan)
-wine_data['primary_grape'] = wine_data['primary_grape'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                                lambda m: '' if m.group(1) else np.nan)
-wine_data['all_grape'] = wine_data['all_grape'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                        lambda m: '' if m.group(1) else np.nan)
-wine_data['price'] = wine_data['price'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                lambda m: '' if m.group(1) else np.nan)
-wine_data['image'] = wine_data['image'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                lambda m: '' if m.group(1) else np.nan)
-wine_data['description'] = wine_data['description'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                            lambda m: '' if m.group(1) else np.nan)
-wine_data['product_link'] = wine_data['product_link'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
-                                                                              lambda m: '' if m.group(1) else np.nan)
-
-# Add dataframe to CSV file
-wine_data.to_csv('wine_data.csv')
-
-# Print data types af dataframe fields for troubleshooting
-dataTypeSeries = wine_data.dtypes
-print(dataTypeSeries)
+# wine_data = wine_data[wine_data.image.astype(str).str.contains(r'(https)')]
+#
+# wine_data.dropna(subset=["product_name"], inplace=True)
+# wine_data.dropna(subset=["year"], inplace=True)
+# wine_data.dropna(subset=["volume"], inplace=True)
+# wine_data.dropna(subset=["proofs"], inplace=True)
+# wine_data.dropna(subset=["country"], inplace=True)
+# wine_data.dropna(subset=["region"], inplace=True)
+# wine_data.dropna(subset=["color"], inplace=True)
+# wine_data.dropna(subset=["primary_grape"], inplace=True)
+# wine_data.dropna(subset=["price"], inplace=True)
+# wine_data.dropna(subset=["image"], inplace=True)
+# wine_data.dropna(subset=["product_link"], inplace=True)
+#
+# # wine_data[wine_data["region"].str.contains("Null") == False]
+# # wine_data[wine_data["color"].str.contains("Null") == False]
+# wine_data.drop(wine_data[wine_data['region'] == 'Null'].index, inplace=True)
+# wine_data.drop(wine_data[wine_data['color'] == 'Null'].index, inplace=True)
+#
+# # Remove any remaining unwanted characters from Pandas dataframe
+# wine_data['product_name'] = wine_data['product_name'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                               lambda m: '' if m.group(1) else np.nan)
+# wine_data['year'] = wine_data['year'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                               lambda m: '' if m.group(1) else np.nan)
+# wine_data['volume'] = wine_data['volume'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                   lambda m: '' if m.group(1) else np.nan)
+# wine_data['proofs'] = wine_data['proofs'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                   lambda m: '' if m.group(1) else np.nan)
+# wine_data['brand'] = wine_data['brand'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                 lambda m: '' if m.group(1) else np.nan)
+# wine_data['country'] = wine_data['country'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\')",
+#                                                                     lambda m: '' if m.group(1) else np.nan)
+# wine_data['region'] = wine_data['region'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                   lambda m: '' if m.group(1) else np.nan)
+# wine_data['color'] = wine_data['color'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                 lambda m: '' if m.group(1) else np.nan)
+# wine_data['primary_grape'] = wine_data['primary_grape'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                                 lambda m: '' if m.group(1) else np.nan)
+# wine_data['all_grape'] = wine_data['all_grape'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                         lambda m: '' if m.group(1) else np.nan)
+# wine_data['price'] = wine_data['price'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                 lambda m: '' if m.group(1) else np.nan)
+# wine_data['image'] = wine_data['image'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                 lambda m: '' if m.group(1) else np.nan)
+# wine_data['description'] = wine_data['description'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                             lambda m: '' if m.group(1) else np.nan)
+# wine_data['product_link'] = wine_data['product_link'].astype(str).str.replace(r"^[][\s]*$|(^'+|'+$|\'|\")",
+#                                                                               lambda m: '' if m.group(1) else np.nan)
+#
+# # Add dataframe to CSV file
+# wine_data.to_csv('wine_data.csv')
+#
+# # Print data types af dataframe fields for troubleshooting
+# dataTypeSeries = wine_data.dtypes
+# print(dataTypeSeries)

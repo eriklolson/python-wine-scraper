@@ -1,15 +1,16 @@
 name: python-wine-scraper
-description: scraper.py collects the data of wine products; it returns a csv file, wine_data.csv, with the scraped data.
-            import.py creates a postgres table called 'bottles' and imports the scraped data from wine_data.cvs into it.
+description: scraper.py collects the data of wine products; it returns a csv file,
+  wine_data.csv, with the scraped data. import.py creates a postgres table called
+  'bottles' and imports the scraped data from wine_data.cvs into it.
 
 
 commands:
   scraper:
-      description: run scraper.py
-      unix: python ${PROJECT_DIR}/scraper.py
-      windows: python %PROJECT_DIR%\scraper.py
-      supports_http_options: true
-      env_spec: default
+    description: run scraper.py
+    unix: python ${PROJECT_DIR}/scraper.py
+    windows: python %PROJECT_DIR%\scraper.py
+    supports_http_options: true
+    env_spec: default
 
 
 channels:
@@ -39,6 +40,5 @@ env_specs:
     - python-dotenv
     - regex
     - requests
-    - scrapy
     - sqlalchemy
 
