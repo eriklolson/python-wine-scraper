@@ -15,20 +15,17 @@ with engine.connect() as connection:
         CREATE TABLE IF NOT EXISTS bottle(
         id SERIAL PRIMARY KEY,
         product_name text,
+        producer text,
+        wine_type text,
+        varietal text,
         year integer,
         volume numeric,
         proofs text,
-        producer_name text,
         country_name text,
         region_name text,
-        appellation text,
-        color_name text,
-        primary_grape text,
-        all_grape text,
         price money,
         image text,
         description text,
-        product_link text
         )
     """)
 
@@ -38,5 +35,5 @@ csv_file = 'wine_data.csv'
 # Convert CSV file to Pandas dataframe for manipulation
 df = pd.read_csv(csv_file, header=0, index_col=0)
 
-# Convert dataframe to SQL format
-df.to_sql('bottle', con=engine, if_exists='replace', index_label='id')
+# Convert dataframe to SQL format, saving in postgres table called bottles
+df.to_sql('bottles', con=engine, if_exists='replace', index_label='id')
