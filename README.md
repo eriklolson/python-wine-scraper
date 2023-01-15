@@ -14,3 +14,6 @@ is used for demonstration purposes only.
    Product data will be scraped and saved in the output file 'wine-data.csv'.
 
 ### Run import.py to load data into Postgres database table
+1. 
+    $ python import.py
+
