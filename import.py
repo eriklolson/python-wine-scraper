@@ -6,7 +6,7 @@ import pandas as pd
 
 load_dotenv(find_dotenv())
 
-# Create SQLAlchemy engine connecting to Postgres account
+# Create SQLAlchemy engine connecting to Postgres database
 engine = create_engine(os.getenv('DATABASE_URI'))
 
 # Create products table in database

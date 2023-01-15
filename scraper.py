@@ -56,7 +56,7 @@ for page in pages:
         year = regex.findall(r'\d+', year)
         years.append(year)
 
-        # extract year from <p class="product-subtitle">2022 / 750 ml. | Item#83885</p>
+        # extract year from '<p class="product-subtitle">2022 / 750 ml. | Item#83885</p>'
         volume = product_element.find('p', 'product-subtitle').text.strip()
         # capture text between the '/' and '|' characters to get year
         volume = regex.findall(r"\/(.*?)\|", volume)
@@ -70,7 +70,7 @@ for page in pages:
         price = subsoup.find('span', {'data-hook': 'price'}).text.strip()
         prices.append([price])
 
-        # extract country from '<p> New Zealand | South Island | Marlborough </p>'
+        # extract country from '<p class=product-location> New Zealand | South Island | Marlborough </p>'
         country = product_element.find('p', 'product-location').text.strip()
         country = regex.findall(r"([^\,\|]+)", country)
         countries.append(country)
@@ -94,17 +94,17 @@ Pandas Dataframe
 # Initialize dataframe
 wine_data = pd.DataFrame({
     'product_name': product_names,
-    'producers': producers,
-    'wine_types': wine_types,
-    'varietals': varietals,
+    'producer': producers,
+    'wine_type': wine_types,
+    'varietal': varietals,
     'year': years,
     'volume': volumes,
-    'proofs': proofs,
+    'proof': proofs,
     'country': countries,
     'region': regions,
     'price': prices,
     'image': images,
-    'description': descriptions,
+    'description': descriptions
 })
 
 # Remove the rows if there are missing values in the following fields. Note: 'description' is not included here because
