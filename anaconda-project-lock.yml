@@ -1,0 +1,172 @@
+# This is an Anaconda project lock file.
+# The lock file locks down exact versions of all your dependencies.
+#
+# In most cases, this file is automatically maintained by the `anaconda-project` command or GUI tools.
+# It's best to keep this file in revision control (such as git or svn).
+# The file is in YAML format, please see http://www.yaml.org/start.html for more.
+#
+
+#
+# Set to false to ignore locked versions.
+#
+locking_enabled: true
+
+#
+# A key goes in here for each env spec.
+#
+env_specs:
+  default:
+    locked: true
+    env_spec_hash: 9f4c8d28b940fe77249db65addb552c20b323a61
+    platforms:
+    - linux-64
+    - win-64
+    packages:
+      all:
+      - anaconda-client=1.11.0=pyhd8ed1ab_1
+      - anaconda-project=0.11.1=pyhd8ed1ab_0
+      - attrs=22.2.0=pyh71513ae_0
+      - beautifulsoup4=4.11.1=pyha770c72_0
+      - certifi=2022.12.7=pyhd8ed1ab_0
+      - charset-normalizer=2.1.1=pyhd8ed1ab_0
+      - click=8.1.3=unix_pyhd8ed1ab_2
+      - clyent=1.2.2=py_1
+      - colorama=0.4.6=pyhd8ed1ab_0
+      - conda-pack=0.7.0=pyh6c4a22f_0
+      - conda-package-handling=2.0.2=pyh38be061_0
+      - conda-package-streaming=0.7.0=pyhd8ed1ab_1
+      - idna=3.4=pyhd8ed1ab_0
+      - importlib-metadata=6.0.0=pyha770c72_0
+      - importlib_resources=5.10.2=pyhd8ed1ab_0
+      - jinja2=3.1.2=pyhd8ed1ab_1
+      - jsonschema=4.17.3=pyhd8ed1ab_0
+      - nbformat=5.7.3=pyhd8ed1ab_0
+      - pip=22.3.1=pyhd8ed1ab_0
+      - pkgutil-resolve-name=1.3.10=pyhd8ed1ab_0
+      - platformdirs=2.6.2=pyhd8ed1ab_0
+      - pycparser=2.21=pyhd8ed1ab_0
+      - pyopenssl=23.0.0=pyhd8ed1ab_0
+      - pysocks=1.7.1=pyha2e5f31_6
+      - python-dateutil=2.8.2=pyhd8ed1ab_0
+      - python-dotenv=0.21.0=pyhd8ed1ab_0
+      - python-fastjsonschema=2.16.2=pyhd8ed1ab_0
+      - python_abi=3.11=3_cp311
+      - pytz=2022.7=pyhd8ed1ab_0
+      - requests=2.28.1=pyhd8ed1ab_1
+      - setuptools=65.6.3=pyhd8ed1ab_0
+      - six=1.16.0=pyh6c4a22f_0
+      - soupsieve=2.3.2.post1=pyhd8ed1ab_0
+      - tqdm=4.64.1=pyhd8ed1ab_0
+      - traitlets=5.8.1=pyhd8ed1ab_0
+      - typing-extensions=4.4.0=hd8ed1ab_0
+      - typing_extensions=4.4.0=pyha770c72_0
+      - tzdata=2022g=h191b570_0
+      - urllib3=1.26.14=pyhd8ed1ab_0
+      - wheel=0.38.4=pyhd8ed1ab_0
+      - zipp=3.11.0=pyhd8ed1ab_0
+      linux-64:
+      - _libgcc_mutex=0.1=conda_forge
+      - _openmp_mutex=4.5=2_gnu
+      - brotlipy=0.7.0=py311hd4cff14_1005
+      - bzip2=1.0.8=h7f98852_4
+      - c-ares=1.18.1=h7f98852_0
+      - ca-certificates=2022.12.7=ha878542_0
+      - cffi=1.15.1=py311h409f033_3
+      - cryptography=39.0.0=py311h9b4c7bb_0
+      - curl=7.87.0=hdc1c0ab_0
+      - expat=2.5.0=h27087fc_0
+      - gdbm=1.18=h0a1914f_2
+      - gettext=0.21.1=h27087fc_0
+      - git=2.39.0=pl5321h693f4a3_0
+      - greenlet=2.0.1=py311ha362b79_0
+      - jupyter_core=5.1.3=py311h38be061_0
+      - keyutils=1.6.1=h166bdaf_0
+      - krb5=1.20.1=h81ceb04_0
+      - ld_impl_linux-64=2.39=hcc3a1bd_1
+      - libblas=3.9.0=16_linux64_openblas
+      - libcblas=3.9.0=16_linux64_openblas
+      - libcurl=7.87.0=hdc1c0ab_0
+      - libedit=3.1.20221030=h5eee18b_0
+      - libev=4.33=h516909a_1
+      - libffi=3.4.2=h7f98852_5
+      - libgcc-ng=12.2.0=h65d4601_19
+      - libgfortran-ng=12.2.0=h69a702a_19
+      - libgfortran5=12.2.0=h337968e_19
+      - libgomp=12.2.0=h65d4601_19
+      - libiconv=1.17=h166bdaf_0
+      - liblapack=3.9.0=16_linux64_openblas
+      - libnghttp2=1.51.0=hff17c54_0
+      - libnsl=2.0.0=h7f98852_0
+      - libopenblas=0.3.21=pthreads_h78a6416_3
+      - libpq=15.1=hb675445_3
+      - libsqlite=3.40.0=h753d276_0
+      - libssh2=1.10.0=hf14f497_3
+      - libstdcxx-ng=12.2.0=h46fd767_19
+      - libuuid=2.32.1=h7f98852_1000
+      - libzlib=1.2.13=h166bdaf_4
+      - markupsafe=2.1.1=py311hd4cff14_2
+      - ncurses=6.3=h27087fc_1
+      - numpy=1.24.1=py311hbde0eaa_0
+      - openssl=3.0.7=h0b41bf4_1
+      - pandas=1.5.2=py311h2872171_2
+      - pcre2=10.40=hc3806b6_0
+      - perl=5.34.0=h5eee18b_2
+      - psycopg2=2.9.3=py311h968e94b_2
+      - pyrsistent=0.19.3=py311h2582759_0
+      - python=3.11.0=he550d4f_1_cpython
+      - pyyaml=6.0=py311hd4cff14_5
+      - readline=8.2=h5eee18b_0
+      - regex=2022.10.31=py311hd4cff14_0
+      - ruamel_yaml=0.15.80=py311hd4cff14_1008
+      - sqlalchemy=1.4.46=py311h2582759_0
+      - tk=8.6.12=h27826a3_0
+      - tornado=6.2=py311hd4cff14_1
+      - xz=5.2.8=h5eee18b_0
+      - yaml=0.2.5=h7f98852_2
+      - zstandard=0.19.0=py311hbe0fcd7_1
+      - zstd=1.5.2=h6239696_4
+      win-64:
+      - brotlipy=0.7.0=py311ha68e1ae_1005
+      - bzip2=1.0.8=h8ffe710_4
+      - ca-certificates=2022.12.7=h5b45459_0
+      - cffi=1.15.1=py311h7d9ee11_3
+      - cryptography=39.0.0=py311h28e9c30_0
+      - git=2.39.0=h57928b3_0
+      - greenlet=2.0.1=py311h12c1d0e_0
+      - intel-openmp=2023.0.0=h57928b3_25922
+      - jupyter_core=5.1.3=py311h1ea47a8_0
+      - krb5=1.20.1=heb0366b_0
+      - libblas=3.9.0=16_win64_mkl
+      - libcblas=3.9.0=16_win64_mkl
+      - libffi=3.4.2=h8ffe710_5
+      - libhwloc=2.8.0=h039e092_1
+      - libiconv=1.17=h8ffe710_0
+      - liblapack=3.9.0=16_win64_mkl
+      - libpq=15.1=ha9684e8_3
+      - libsqlite=3.40.0=hcfcfb64_0
+      - libxml2=2.10.3=hc3477c8_0
+      - libzlib=1.2.13=hcfcfb64_4
+      - markupsafe=2.1.1=py311ha68e1ae_2
+      - mkl=2022.1.0=h6a75c08_874
+      - numpy=1.24.1=py311h95d790f_0
+      - openssl=3.0.7=hcfcfb64_1
+      - pandas=1.5.2=py311hf63dbb6_2
+      - psycopg2=2.9.3=py311hb12f294_2
+      - pthreads-win32=2.9.1=hfa6e2cd_3
+      - pyrsistent=0.19.3=py311ha68e1ae_0
+      - python=3.11.0=hcf16a7b_0_cpython
+      - pywin32=304=py311h12c1d0e_2
+      - pyyaml=6.0=py311ha68e1ae_5
+      - regex=2022.10.31=py311ha68e1ae_0
+      - ruamel_yaml=0.15.80=py311ha68e1ae_1008
+      - sqlalchemy=1.4.46=py311ha68e1ae_0
+      - tbb=2021.7.0=h91493d7_1
+      - tk=8.6.12=h8ffe710_0
+      - tornado=6.2=py311ha68e1ae_1
+      - ucrt=10.0.22621.0=h57928b3_0
+      - vc=14.3=hb6edc58_10
+      - vs2015_runtime=14.34.31931=h4c5c07a_10
+      - xz=5.2.8=h8cc25b3_0
+      - yaml=0.2.5=h8ffe710_2
+      - zstandard=0.19.0=py311he5d195f_1
+      - zstd=1.5.2=h7755175_4
