@@ -1,7 +1,10 @@
-# Overview
-This web scraper uses BeautifulSoup4 to collect wine product data from a wine merchant website. It does so for the purpose 
-of supplying mock inventory to my eCommerce web-app, flask-wineshop (https://github.com/eriklolson/flask-wineshop).
-This is a template that may be adapted to scrape product data from eCommerce websites. 
+# Full-Stack eCommerce Project: python-wine-scraper
+## Project Objective
+To achieve my goal of creating my first eCommerce website, I made two applications: 
+the web-app, [flask-wineshop](https://github.com/eriklolson/flask-wineshop), that produces the eCommerce website and
+the web-scraper, python-wine-scraper, that supplies the back-end database with mock wine products. This is the repository
+for the latter. I reduced the syntax particular to a certain website that I scrapped to a general template with dynamic 
+values; it may be adapted to scrape product data from other eCommerce websites.
 
 # Directions
 ### Run scraper.py: collect product data
