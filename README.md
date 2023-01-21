@@ -1,10 +1,10 @@
 # Full-Stack eCommerce Project: python-wine-scraper
 ## Project Objective
-To achieve my goal of creating my first eCommerce website, I made two applications: 
-the web-app, [flask-wineshop](https://github.com/eriklolson/flask-wineshop), that produces the eCommerce website and
-the web-scraper, python-wine-scraper, that supplies the back-end database with mock wine products. This is the repository
-for the latter. I reduced the syntax particular to a certain website that I scrapped to a general template with dynamic 
-values; it may be adapted to scrape product data from other eCommerce websites.
+To create my first eCommerce website, I made two applications:
+the web app—<em>[flask-wineshop](https://github.com/eriklolson/flask-wineshop)</em>—that produces the eCommerce website and the
+web scraper—<em>python-wine-scraper</em>—that supplies the back-end database with mock wine products.  For this repository I 
+reduced the syntax that was particular to the website I scrapped and replace it with a template format with dynamic 
+values, which can be adapted to scrape product data from other eCommerce websites.
 
 # Directions
 ### Run scraper.py: collect product data
